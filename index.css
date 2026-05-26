@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#arena {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://imgs.search.brave.com/lbT1GHgUxNcY0uoMYyQWD0BY8sXlcPD4xsgmtraflaM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/dmV0b3Jlcy1wcmVt/aXVtL2Z1bmRvLWRl/LWNhbXBvLWRlLWZ1/dGVib2wtZGUtZnV0/ZWJvbF82NDc0OS0y/ODguanBnP3NlbXQ9/YWlzX2h5YnJpZCZ3/PTc0MCZxPTgw");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bola {
+  width: 5rem; /* ou o tamanho que quiser */
+  height: 5rem;
+  background-image: url("https://imgs.search.brave.com/dtLHEtES7TW-rhU4e9F--YbJsKeYyt_pVr1xa2Dv_rs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMDEv/NzkxLzAwNC9zbWFs/bC9zb2NjZXItYmFs/bC1yb3RhdGluZy1p/c29sYXRlZC1vbi1i/bGFjay1iYWNrZ3Jv/dW5kLWZyZWUtdmlk/ZW8uanBn");
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%; /* opcional, deixa redondo */
+}
+
+button{
+    width: 5rem;
+    cursor:pointer;
+}
