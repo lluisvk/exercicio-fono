@@ -6,6 +6,7 @@ let direcaoX = 1;
 let cicles = 0;
 let animando = false;
 let estado = "vertical";
+let velocidade = 2;
 
 const limitScreenY = window.innerHeight / 2 - bola.offsetHeight;
 const limitScreenX = window.innerWidth / 2 - bola.offsetWidth;
@@ -25,7 +26,7 @@ function resetValues() {
 function cruzAnimation() {
   if (!animando) return;
   if (estado === "vertical") {
-    initialPositionY += direcaoY;
+    initialPositionY += direcaoY * velocidade;
 
     if (initialPositionY > limitScreenY || initialPositionY < -limitScreenY) {
       direcaoY *= -1;
@@ -38,7 +39,7 @@ function cruzAnimation() {
   }
 
   if (estado === "horizontal") {
-    initialPositionX += direcaoX;
+    initialPositionX += direcaoX * velocidade;
 
     if (initialPositionX > limitScreenX || initialPositionX < -limitScreenX) {
       direcaoX *= -1;
@@ -87,7 +88,6 @@ const cruz = () => {
 
 function ballBounce() {
   if (!animando) return;
-  let velocidade = 2;
   initialPositionY += direcaoY * velocidade;
 
   if (cicles >= 2) {
@@ -96,13 +96,13 @@ function ballBounce() {
 
   if (initialPositionY > limitScreenY || initialPositionY < -limitScreenY) {
     direcaoY *= -1;
-    velocidade++;
+    velocidade+=0.05;
     cicles++;
   }
 
   if (initialPositionX > limitScreenX || initialPositionX < -limitScreenX) {
     direcaoX *= -1;
-    velocidade++;
+    velocidade+=0.05;
   }
 
   bola.style.transform = `translate(${initialPositionX}px,${initialPositionY}px)`;
