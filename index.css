@@ -24,8 +24,8 @@ body {
 }
 
 #bola {
-  width: 5rem; /* ou o tamanho que quiser */
-  height: 5rem;
+  width: 4rem; /* ou o tamanho que quiser */
+  height: 4rem;
   background-image: url("ChatGPT Image 26 de mai. de 2026, 08_45_02.png");
   position: absolute;
   background-size: cover;
